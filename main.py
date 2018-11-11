@@ -2,6 +2,7 @@
 
 from getter import *
 from tweet import *
+from slack import *
 import sys
 import time
 
@@ -65,7 +66,8 @@ def main():
             dept = ', '.join(p['dept'])
             message = p['day'] + " " + p['time'] + "限 " + p['course'] + "(" + p['teacher'] + ", " + dept + ", " + p['grade'] + ", クラス:" + p['class'] + ")"
             print(message)
-            tweet(message)
+            # tweet(message)
+            slack(message)
         except Exception as e:
             print(e)
         time.sleep(3)
