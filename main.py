@@ -2,7 +2,8 @@
 
 from getter import *
 from tweet import *
-from slack import *
+from slack import * 
+from calAdd import *
 import sys
 import time
 
@@ -61,16 +62,20 @@ def main():
     new_posts = get_updates(BASE_URL='https://inside.teu.ac.jp/hachiouji/hachioji_common/cancel/page/')
 
     different_posts = find_new_posts(target=new_posts, base=old_posts)
+    calAdd(posts=different_posts)
+
+    '''
     for p in different_posts:
         try:
             dept = ', '.join(p['dept'])
             message = p['day'] + " " + p['time'] + "限 " + p['course'] + "(" + p['teacher'] + ", " + dept + ", " + p['grade'] + ", クラス:" + p['class'] + ")"
             print(message)
-            # tweet(message)
+            tweet(message)
             slack(message)
         except Exception as e:
             print(e)
         time.sleep(3)
+    '''
 
     save2file(save_posts=new_posts, save_file=JSON_FILE)
     # 'day', 'time', 'course', 'teacher', 'dept', 'grade', 'class', 'misc', 'update'
