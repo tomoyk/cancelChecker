@@ -36,7 +36,7 @@ $ python3 calAdd.py --noauth_local_webserver
 Cronに登録する場合は以下のようにCronを登録する。
 ```
 $ crontab -e
-*/5 * * * *  /usr/bin/python36 /home/foo/cancelChecker/main.py
+*/5 * * * *  /usr/bin/cd /home/foo/cancelChecker && /usr/bin/python3 /home/foo/cancelChecker/main.py
 ```
 
 ## 概要
