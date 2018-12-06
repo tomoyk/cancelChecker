@@ -6,18 +6,22 @@
 
 パッケージを導入する。
 
-    $ pip3 install lxml twitter bs
+```
+$ pip3 install lxml twitter bs
+$ pip3 install --upgrade google-api-python-client oauth2client
+```
 
 走らせる。
 
     $ python3 main.py
 
 Cronに登録する場合は以下のようなスクリプトを作成する。
-
-    #!/bin/bash
-    cd /you-path/
-    python3 main.py
-    exit 0
+```
+#!/bin/bash
+cd /you-path/
+python3 main.py
+exit 0
+```
 
 ## 概要
 
