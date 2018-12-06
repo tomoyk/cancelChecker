@@ -7,7 +7,7 @@
 パッケージを導入する。
 
 ```
-$ pip3 install lxml twitter bs
+$ pip3 install lxml twitter bs requests
 $ pip3 install --upgrade google-api-python-client oauth2client
 ```
 
@@ -29,3 +29,7 @@ exit 0
 1. 取得したデータを解析して過去のデータと比較
 1. 新たなデータのみを取り出してTwitterに投稿
 
+## Note
+
+Googleカレンダの扱い: 
+https://gist.github.com/tomoyk/a46b2e181ff76a82fddf45566d68a9f0
