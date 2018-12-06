@@ -7,7 +7,7 @@
 ### パッケージを導入
 
 ```
-$ pip3 install lxml twitter bs requests
+$ pip3 install lxml twitter bs requests feedparser
 $ pip3 install --upgrade google-api-python-client oauth2client
 ```
 
