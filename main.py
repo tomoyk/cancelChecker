@@ -7,17 +7,15 @@ from calAdd import *
 import sys
 import time
 
-
 # Open and Read file
 # Return object(dict/list)
 def read_json_file(open_file):
 
     # Read json file
     with open(open_file, 'r') as f:
-        posts = f.read()
+        # Convert json -> list&dict
+        posts = json.loads(f.read())
     
-    # Convert json -> list&dict
-    posts = json.loads(posts)
     
     # for o in posts:
     #     print(o)
@@ -48,7 +46,7 @@ def find_new_posts(target, base):
 def save2file(save_posts, save_file):
 
     # Convert list&dict -> json
-    dumped_posts = json.dumps(save_posts, ensure_ascii=False, indent=4)
+    dumped_posts = json.dumps(save_posts, ensure_ascii=True, indent=4)
     
     # Store json file
     with open(save_file, 'w') as f:
