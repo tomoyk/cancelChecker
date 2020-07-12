@@ -42,7 +42,8 @@ Cronに登録する場合は以下のようにCronを登録する。
 #!/bin/bash -xe
 
 cd /home/foo/cancelChecker
-/usr/bin/python3 main.py
+. env/bin/activate
+python main.py
 ```
 
 ```
