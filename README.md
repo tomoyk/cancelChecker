@@ -7,8 +7,9 @@
 ### パッケージを導入
 
 ```
-$ pip3 install lxml twitter bs requests feedparser
-$ pip3 install --upgrade google-api-python-client oauth2client
+$ python3 -m venv env
+$ . env/bin/activate
+$ pip install -r requirements.txt
 ```
 
 ### クレデンシャルの取得
@@ -22,7 +23,7 @@ https://console.developers.google.com/apis/credentials
 ### 認証の取得
 
 ```
-$ python3 calAdd.py --noauth_local_webserver
+$ python calAdd.py --noauth_local_webserver
 ```
 
 ブラウザに表示された認証コードをターミナルに貼り付ける。
@@ -31,7 +32,9 @@ $ python3 calAdd.py --noauth_local_webserver
 
 走らせる。
 
-    $ python3 main.py
+```
+$ python main.py
+```
 
 Cronに登録する場合は以下のようにCronを登録する。
 
